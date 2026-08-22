@@ -16,66 +16,124 @@
   hr { border:0; border-top:1px solid #D9DCDF; margin:2rem 0; }
   @media (prefers-color-scheme: dark) { hr { border-top-color:#24272A; } .sub { color:#868A8E; } }
   code { background:rgba(128,128,128,.15); padding:.1em .35em; border-radius:3px; }
+  nav a { color:inherit; }
 </style>
 </head>
 <body>
+
 <h1>Privacy Policy</h1>
-<p class="sub">Speakeasy · last updated 18 August 2026</p>
+<p class="sub">Speakeasy &middot; last updated 22 August 2026</p>
 
-<p><strong>Short version: nothing you do in Speakeasy leaves your phone.</strong> There is
-no account, no analytics, and no server. The app makes no network requests at all.</p>
-
-<hr>
-
-<h2>No account</h2>
-<p>There is no sign-up and no sign-in. The app has no way of knowing who you are, and it
-never asks.</p>
+<p><strong>Short version:</strong> your voice never leaves your phone, because it is never
+recorded. Everything else is off by default: signing in is optional, and so is the one
+feature that sends the text of a talk anywhere. Both are described below, and both can be
+switched off.</p>
 
 <h2>Your voice</h2>
 <p>Speakeasy uses the microphone only while a drill is running. Your speech is turned into
-text by your own device, using Apple's on-device speech recognition — the app requires
+text by your own device, using Apple's on-device speech recognition. The app requires
 on-device transcription and will refuse to run rather than send your audio anywhere. The
 audio itself is never written to disk and is discarded the moment the drill ends. There is
-no recording to play back, because none is kept.</p>
+no recording to play back, because none is kept. This is true whether or not you sign in.</p>
 
-<h2>What is stored, and where</h2>
-<p>Your talks — the two words, the transcript, the pace, the pauses and the date — are
-saved in a single file on your own device. They are not uploaded, shared, or backed up
-anywhere by the app. They are included in your device's own iCloud or computer backup if
-you have that switched on, the same as any other app's data.</p>
-<p>Deleting the app deletes them. Settings also has a “Delete all history” button that
-removes everything without uninstalling.</p>
+<h2>What is stored on your device</h2>
+<p>Your talks, meaning the two words, the transcript, the pace, the pauses and the date,
+are saved in a single file on your own device. They are not uploaded and they are not
+shared. They are included in your device's own iCloud or computer backup if you have that
+switched on, the same as any other app's data.</p>
+<p>Deleting the app deletes them. Settings also has a "Delete all history" button that
+removes everything without uninstalling, and you can delete a single talk by long-pressing
+it in History.</p>
+
+<h2>The optional account</h2>
+<p>Speakeasy works completely without an account, and it does not ask for one to unlock
+anything. An account exists for one reason: so your streak survives changing phones.</p>
+<p>If you choose to sign in, Speakeasy uses <strong>Sign in with Apple</strong>. The app
+requests no personal information from Apple: it does not ask for your name and it does not
+ask for your email address, so it never receives either one. Apple returns an anonymous
+identifier for your account and nothing else.</p>
+<p>What is then stored on the server, which is hosted by Supabase:</p>
+<ul>
+  <li>that anonymous identifier</li>
+  <li>a username you type in yourself, which does not have to be your real name</li>
+  <li>the number of days you have practiced, and the date of the most recent one</li>
+</ul>
+<p>What is never sent to the server, signed in or not: your audio, your transcripts, your
+results, the words you were given, and your email address.</p>
+
+<h2>Deleting your account</h2>
+<p>Settings has a "Delete account" button. It erases your record on the server, including
+the username and the practice count. Your talks are stored separately on your own device
+and are not touched by that button; delete those with "Delete all history" or by deleting
+the app.</p>
+<p>You can also stop using the account at any time by signing out, which leaves the app
+fully working.</p>
+
+<h2>Reminders</h2>
+<p>If you turn on the daily reminder, it is scheduled by your own device. No push token is
+registered, nothing is sent to a server, and turning it off in Settings removes every
+pending reminder.</p>
+
+<h2>The home screen widget</h2>
+<p>The widget reads today's two words, which are computed on the device from the date, and
+your streak count, which is stored in your device's keychain so that the widget can see it.
+Neither leaves the phone.</p>
+
+<h2>The connection check, if you switch it on</h2>
+<p>Speakeasy can check whether you actually linked the two words you were given, rather than
+just saying both. That is a judgment about meaning, so it is the one thing in the app that
+cannot be worked out on your phone by counting, and the one feature that sends any part of a
+talk anywhere.</p>
+<p><strong>It is off until you turn it on</strong>, in Settings, behind a screen that says
+all of this before you agree. With it on:</p>
+<ul>
+  <li>the text of a finished talk, and the two words, are sent to <strong>Google's Gemini
+      API</strong>, through a server of ours that holds the key so the key never ships
+      inside the app</li>
+  <li>Google's own terms and privacy policy govern what they do with that text</li>
+  <li>your audio is never sent, because it is never recorded</li>
+  <li>your name, your email, your streak, your history and every other talk are never sent</li>
+  <li>turning the switch off stops it immediately, and the rest of the results screen is
+      unaffected</li>
+</ul>
+
+<h2>No tracking</h2>
+<p>No analytics, no advertising identifiers, no third-party tracking SDKs, no crash
+reporting services, no cookies. Nothing about how you use the app is collected, profiled or
+transmitted, and nothing is sold or shared with anyone for advertising or any other purpose.
+The app contacts a server in exactly two situations, and you choose both of them: signing
+in, and switching on the connection check.</p>
 
 <h2>Withdrawing permission</h2>
 <p>You can revoke the app's access to the microphone or to speech recognition at any time
-in iOS Settings, under Privacy &amp; Security, or by opening Settings and finding Speakeasy
-in the list of apps. The app will tell you it cannot run and will not attempt to work
-around it. Nothing you have already recorded is affected, because nothing is kept.</p>
+in iOS Settings, under Privacy &amp; Security, or by finding Speakeasy in the list of apps.
+The app will tell you it cannot run and will not attempt to work around it. Nothing you
+have already said is affected, because no audio is kept.</p>
 
 <h2>How long things are kept</h2>
-<p>Audio: not at all. It exists only in memory for the length of a drill and is discarded
-when the drill ends. Transcripts and statistics: until you delete them. There is no
-expiry, no server copy, and no way for anyone else to reach them. Delete them individually
-by long-pressing a talk in History, all at once from Settings, or by deleting the app.</p>
-
-<h2>No tracking</h2>
-<p>No analytics, no advertising identifiers, no third-party SDKs, no crash reporting
-services, no cookies. Nothing about your use of the app is collected or transmitted.</p>
-
-<h2>Purchases</h2>
-<p>Speakeasy Pro is an auto-renewing subscription handled entirely by Apple. Apple
-processes the payment and tells the app only whether a subscription is currently active.
-Payment details are never seen by the app or by us. Apple's own privacy policy covers that
-transaction.</p>
+<p>Audio: not at all. It exists only in memory for the length of a drill. Transcripts and
+statistics: on your device until you delete them. Account record: on the server until you
+delete the account. There is no expiry and no separate archive.</p>
 
 <h2>Children</h2>
-<p>The app collects no personal data from anyone, of any age.</p>
+<p>Speakeasy is not directed at children under 13 and does not knowingly collect personal
+information from them. If an account was created by a child under 13, write to the address
+below and it will be deleted.</p>
+
+<h2>Purchases</h2>
+<p>Speakeasy is currently free and offers nothing to buy. If that ever changes, purchases
+would be handled entirely by Apple, payment details would never be seen by the app, and
+this policy would be updated first.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the updated version will be posted at this address with a new
 date at the top.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:sravanireddy.b@gmail.com">sravanireddy.b@gmail.com</a></p>
+<p>Questions about this policy: <code>speakeasyhelp@gmail.com</code></p>
+
+<hr>
+<nav><a href="../">Speakeasy</a> &middot; <a href="../terms/">Terms of Service</a></nav>
+
 </body>
 </html>
