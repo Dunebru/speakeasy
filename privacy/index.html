@@ -25,9 +25,8 @@
 <p class="sub">Speakeasy &middot; last updated 24 August 2026</p>
 
 <p><strong>Short version:</strong> your voice never leaves your phone, because it is never
-recorded. Everything else is off by default: signing in is optional, and so is the one
-feature that sends the text of a talk anywhere. Both are described below, and both can be
-switched off.</p>
+recorded. There is no account and no sign-in. One optional feature sends the text of a
+talk for checking, it is off until you switch it on, and it is described below.</p>
 
 <h2>Your voice</h2>
 <p>Speakeasy uses the microphone only while a drill is running. Your speech is turned into
@@ -44,30 +43,6 @@ switched on, the same as any other app's data.</p>
 <p>Deleting the app deletes them. Settings also has a "Delete all history" button that
 removes everything without uninstalling, and you can delete a single talk by long-pressing
 it in History.</p>
-
-<h2>The optional account</h2>
-<p>Speakeasy works completely without an account, and it does not ask for one to unlock
-anything. An account exists for one reason: so your streak survives changing phones.</p>
-<p>If you choose to sign in, Speakeasy uses <strong>Sign in with Apple</strong>. The app
-requests no personal information from Apple: it does not ask for your name and it does not
-ask for your email address, so it never receives either one. Apple returns an anonymous
-identifier for your account and nothing else.</p>
-<p>What is then stored on the server, which is hosted by Supabase:</p>
-<ul>
-  <li>that anonymous identifier</li>
-  <li>a username you type in yourself, which does not have to be your real name</li>
-  <li>the number of days you have practiced, and the date of the most recent one</li>
-</ul>
-<p>What is never sent to the server, signed in or not: your audio, your transcripts, your
-results, the words you were given, and your email address.</p>
-
-<h2>Deleting your account</h2>
-<p>Settings has a "Delete account" button. It erases your record on the server, including
-the username and the practice count. Your talks are stored separately on your own device
-and are not touched by that button; delete those with "Delete all history" or by deleting
-the app.</p>
-<p>You can also stop using the account at any time by signing out, which leaves the app
-fully working.</p>
 
 <h2>Reminders</h2>
 <p>If you turn on the daily reminder, it is scheduled by your own device. No push token is
@@ -107,9 +82,9 @@ all of this before you agree. With it on:</p>
 <p>No analytics, no advertising identifiers, no third-party tracking SDKs, no crash
 reporting services, no cookies. Nothing about how you use the app is collected, profiled or
 transmitted, and nothing is sold or shared with anyone for advertising or any other purpose.
-With the connection check switched off, the app makes two kinds of network request. One is
-yours to choose: signing in. The other is not a choice, and it carries nothing about you:
-the phone downloads Apple&rsquo;s speech model once, over an unmetered connection, and that
+With the connection check switched off, the app makes exactly one network request, ever,
+and it carries nothing about you: the phone downloads Apple&rsquo;s speech model once,
+over an unmetered connection, and that
 download is what allows the transcription described above to run on your own device rather
 than on somebody&rsquo;s server. Switching the connection check on adds one more, described
 above, and only for as long as it is on.</p>
@@ -122,13 +97,13 @@ have already said is affected, because no audio is kept.</p>
 
 <h2>How long things are kept</h2>
 <p>Audio: not at all. It exists only in memory for the length of a drill. Transcripts and
-statistics: on your device until you delete them. Account record: on the server until you
-delete the account. There is no expiry and no separate archive.</p>
+statistics: on your device until you delete them. There is no account and nothing of yours
+is stored on a server. There is no expiry and no separate archive.</p>
 
 <h2>Children</h2>
 <p>Speakeasy is not directed at children under 13 and does not knowingly collect personal
-information from them. If an account was created by a child under 13, write to the address
-below and it will be deleted.</p>
+information from them. There is no account to create, and nothing is collected that could
+identify a child.</p>
 
 <h2>Purchases</h2>
 <p>Speakeasy is currently free and offers nothing to buy. If that ever changes, purchases
