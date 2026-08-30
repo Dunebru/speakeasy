@@ -1,4 +1,4 @@
 {
-  "disableAI": false,
-  "closed": true
+  "disableAI": true,
+  "closed": false
 }
