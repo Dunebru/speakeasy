@@ -1,5 +1,5 @@
 {
-  "closed": false,
-  "disableAI": false,
-  "closedMessage": null
+  "closed": true,
+  "closedMessage": null,
+  "disableAI": false
 }
