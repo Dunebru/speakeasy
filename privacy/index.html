@@ -50,11 +50,13 @@ that removes every talk and every recording without uninstalling, and you can de
 single talk, with its recording, by long-pressing it in History.</p>
 
 <h2>Two small files the app reads on every launch</h2>
-<p>On every launch the app reads two small files published alongside it: one that can
-switch a broken feature off from our end, and one that carries the word packs. They are
-the same files for everybody, they say nothing about you, and reading them sends nothing
-about you. They are fetched from GitHub Pages, which sees the request the way any web
-server sees a page load.</p>
+<p>On every launch the app reads two small files published alongside it: a settings file
+that can switch a broken feature off from our end, and a content file that carries the
+word packs. The settings file is read whether or not any optional feature is on, because a
+switch that only reached the people who opted in could not take a broken build out of
+service for anybody else. They are the same files for everybody, they say nothing about
+you, and reading them sends nothing about you. They are fetched from GitHub Pages, which
+sees the request the way any web server sees a page load.</p>
 
 <h2>Reminders</h2>
 <p>If you turn on the daily reminder, it is scheduled by your own device. No push token is
